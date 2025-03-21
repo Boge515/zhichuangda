@@ -13,7 +13,7 @@
             disabled
           >
             <div class="titleBar">
-              <img class="logo" src=".././assets/logo.jpg" />
+              <img class="logo" src=".././assets/logo.png" />
               <div class="title">智创答AI应用平台</div>
             </div>
           </a-menu-item>
