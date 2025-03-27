@@ -6,9 +6,9 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/zhichuangda
+    url: jdbc:mysql://10.36.110.88:3306/zhichuangda
     username: root
-    password: 123456
+    password: XHZabc123
   # Redis 配置
   # todo 需替换配置
   redis:
