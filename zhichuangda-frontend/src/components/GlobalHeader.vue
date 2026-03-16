@@ -28,7 +28,9 @@
       </a-col>
       <a-col flex="100px">
         <div v-if="loginUserStore.loginUser.id">
-          {{ loginUserStore.loginUser.userName ?? "无名" }}
+          <a-link @click="goToUserCenter" style="cursor: pointer">
+            {{ loginUserStore.loginUser.userName ?? "无名" }}
+          </a-link>
         </div>
         <div v-else>
           <a-button type="primary" href="/user/login">登录</a-button>
@@ -61,6 +63,14 @@ const doMenuClick = (key: string) => {
     path: key,
   });
 };
+
+// 跳转到个人中心
+const goToUserCenter = () => {
+  router.push({
+    path: "/user/center",
+  });
+};
+
 // 展示在菜单栏的路由数组
 const visibleRoutes = computed(() => {
   return routes.filter((item) => {

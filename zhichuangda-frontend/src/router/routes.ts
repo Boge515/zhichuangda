@@ -5,6 +5,7 @@ import ACCESS_ENUM from "@/access/accessEnum";
 import NoAuth from "@/views/NoAuth.vue";
 import UserLoginPage from "@/views/user/UserLoginPage.vue";
 import UserRegisterPage from "@/views/user/UserRegisterPage.vue";
+import UserCenterPage from "@/views/user/UserCenterPage.vue";
 import AdminUserPage from "@/views/admin/AdminUserPage.vue";
 import AdminAppPage from "@/views/admin/AdminAppPage.vue";
 import AdminQuestionPage from "@/views/admin/AdminQuestionPage.vue";
@@ -159,6 +160,14 @@ export const routes: Array<RouteRecordRaw> = [
         path: "/user/register",
         name: "用户注册",
         component: UserRegisterPage,
+      },
+      {
+        path: "/user/center",
+        name: "个人中心",
+        component: UserCenterPage,
+        meta: {
+          access: ACCESS_ENUM.USER,
+        },
       },
     ],
     meta: {
